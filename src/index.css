@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #080920;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .nova-input {
+    @apply w-full bg-[#080920] border border-white/10 rounded-xl pr-4 py-3.5 text-white placeholder-nova-muted outline-none transition-all duration-200;
+  }
+  .nova-input:focus {
+    @apply border-nova-purple/60;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+  }
+}
